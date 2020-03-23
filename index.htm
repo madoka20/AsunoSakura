@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AsunoSakura</title>
+  <script src="vue.js"></script>
+  <link rel="stylesheet" type="text/css" href="../Semantic-UI-CSS-master/semantic.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="../Semantic-UI-CSS-master/semantic.js"></script>
+  <link rel="stylesheet" href="index.css">
+  
+  
+
+</head>
+
+<body>
+  <div id="app">
+    <!-- 顶部菜单 -->
+    <div class="ui fixed inverted menu pink">
+      <div class="ui container">
+        <a href="#" class="header item">
+          <img class="logo" src="imgs/logo.png">
+          AsunoSakura
+        </a>
+        <a href="#" class="item">樱花预报</a>
+
+
+
+        <div class="ui simple dropdown item">
+          上传照片<i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="header">选择地区</div>
+            <div class="divider"></div>
+            <a class="item" href="#">成都</a>
+            <a class="item" href="#">武汉</a>
+            <a class="item" href="#">南京</a>
+          </div>
+        </div>
+
+        <!-- 搜索和登录 右边菜单 -->
+        <div class="right menu">
+          <div class="item">
+            <div class="ui icon input">
+              <input type="text" placeholder="搜索地区...">
+              <i class="search link icon"></i>
+            </div>
+          </div>
+          <a class="ui item">登录 </a>
+        </div>
+
+      </div>
+    </div>
+
+
+      <!-- 欢迎背景 -->
+      <div class="pusher">
+        <div class="ui vertical masthead center aligned segment">
+          <div class="ui text container">
+            <div class="welcome">
+              <h1>
+                欢迎访问AsunoSakura
+              </h1>
+              <h2>了解最新樱花预报</h2>
+              <div class="ui huge pink button"> 开始你的春日之旅吧！<i class="right arrow icon"></i></div>
+            </div>
+            </div>
+        </div>
+      </div>
+  
+  
+      <!-- 页面内容 -->
+    <div class="ui container content">
+      <div class="ui divider"></div>
+      <!-- 日期 -->
+      <i class="icon calendar" style="float:left; color:#ff03af"></i>
+      <div class="today">
+        今天是{{addDate()}}
+      </div>
+      <div class="address">
+        <i class="location arrow icon"></i>
+       {{location}}
+      </div>
+      <!-- 三色banner -->
+      <div class="pinkbanner">
+        <div class="pink1"></div>
+        <div class="pink2"></div>
+        <div class="pink3"></div>
+      </div>
+
+      <!-- 地图 -->
+      
+      <h1 class="mapintrotitle">
+        樱花地图
+      </h1>
+      <p class="mapintro">
+        通过对2019年11月至2020年2月的气温与100年内同期平均气温对比，计算出的大体樱花开放时间。
+        此地图仅供参考，实际开花时间会随着地形，天气，樱花种类而变化，但误差不会超过前后五天。
+        点击地图上的城市，开启你的旅程吧！
+      </p>
+      <div class="sakuramap">
+        <img src="imgs/sakuramap.png" alt="sakuramap">
+       <a href="" class="locationbutton"><i class="heart icon"></i>成都</a> 
+        </div>
+
+    </div>
+
+
+
+
+  </div>
+
+</body>
+<script>
+  var vm = new Vue({
+    el: '#app',
+    data: {
+      location:'正在获取你的位置……',
+    },
+    methods: {
+      addDate() {
+        nowDate = new Date();
+        let date = {
+          year: nowDate.getFullYear(),
+          month: nowDate.getMonth() + 1,
+          date: nowDate.getDate(),
+        }
+        console.log(date);
+        let systemDate = date.year + '年' + date.month + '月' + date.date + '日';
+        return systemDate;
+      }
+
+    },
+
+
+  }
+  );
+</script>
+
+</html>

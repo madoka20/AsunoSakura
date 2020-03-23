@@ -1,0 +1,88 @@
+.pusher{
+    position: relative;
+    top:45px;
+    height: 400px;
+    background-color:rgb(252, 225, 230);
+}
+
+.welcome{
+
+   position: relative;
+   margin-bottom: 30px;
+   top:90px;
+}
+
+.welcome h1,.welcome h2{
+    /* 字体需要调整 用googlefont */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color:#ff03af;
+   margin-left: 10px;
+   margin-bottom: 30px;
+}
+.content{
+    position: relative;
+    top: 50px;
+}
+.content .today{
+    color:#ff03af;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    float: left;
+}
+.content .address{
+    color:#ff03af;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    float:right;
+}
+.content .pinkbanner{
+   
+    position: relative;
+    top:25px;
+    clear: both;
+   
+}
+.content .pink1{
+    background-color:#ff03af;
+    width: 33.33%;
+    height: 20px;
+    float: left;
+}
+.content .pink2{
+    background-color:rgb(255, 192, 203);
+    width: 33.34%;
+    height: 20px;
+    float: left;
+}
+.content .pink3{
+    background-color:#ff94bd;
+    width: 33.33%;
+    height: 20px;
+    float: left;
+}
+.sakuramap img{
+    margin:auto 0;
+}
+.mapintrotitle{
+    position: relative;
+    top: 30px;
+    color:#ff03af;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.mapintro{
+    position: relative;
+    top: 30px;
+    color:#ff03af;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:20px;
+}
+.locationbutton{
+    position: absolute;
+    left:500px;
+    top:700px;
+    color:white;
+}
+.locationbutton:hover{
+    color:#f7d5f1;
+  
+}
